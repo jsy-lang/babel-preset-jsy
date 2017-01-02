@@ -124,9 +124,9 @@ babel-plugin-check-es2015-constants@^6.3.13:
   dependencies:
     babel-runtime "^6.0.0"
 
-babel-plugin-offside-js@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-offside-js/-/babel-plugin-offside-js-0.3.1.tgz#4754bd17926ca4a0b3df4433805f4ac58d108d6b"
+babel-plugin-offside-js@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-offside-js/-/babel-plugin-offside-js-0.3.2.tgz#06b0dff57308b2d06e1f127a337fb9ecfb1e2573"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -374,13 +374,6 @@ babel-plugin-transform-strict-mode@^6.18.0:
     babel-runtime "^6.0.0"
     babel-types "^6.18.0"
 
-babel-plugin-undeclared-variables-check@^6.8.0:
-  version "6.8.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-undeclared-variables-check/-/babel-plugin-undeclared-variables-check-6.8.0.tgz#a92d21ba84c9e2e4e0e06862d45094c8efcc5827"
-  dependencies:
-    babel-runtime "^6.0.0"
-    leven "^1.0.2"
-
 babel-preset-env@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/babel-preset-env/-/babel-preset-env-1.1.4.tgz#d876f9fcff5fe0612db3dcbc0c87503b41d4873f"
@@ -529,10 +522,6 @@ js-tokens@^2.0.0:
 jsesc@~0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
-
-leven@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/leven/-/leven-1.0.2.tgz#9144b6eebca5f1d0680169f1a6770dcea60b75c3"
 
 lodash@^4.2.0:
   version "4.17.3"
