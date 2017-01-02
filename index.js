@@ -1,4 +1,5 @@
 'use strict'
+let bpi_offside_js = require('babel-plugin-offside-js')
 
 module.exports = exports = function preset(context, opts={}) {
   if (!opts.targets)
@@ -7,11 +8,11 @@ module.exports = exports = function preset(context, opts={}) {
     opts.targets.browser = 'last 1 versions, > 2% in US'
 
   let presets =
-    [ [require('babel-preset-env'), opts]
+    [ [require('babel-preset-env').default, opts]
     , require('babel-preset-stage-3')
     ]
   let plugins = 
-    [ require('babel-plugin-offside-js')
+    [ bpi_offside_js
     , require('babel-plugin-transform-class-properties')
     ]
 
