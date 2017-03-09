@@ -257,9 +257,9 @@ babel-plugin-check-es2015-constants@^6.3.13:
   dependencies:
     babel-runtime "^6.0.0"
 
-babel-plugin-offside-js@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-offside-js/-/babel-plugin-offside-js-0.5.0.tgz#b92795dce81bd57667ebb08814b690c2765da6b2"
+babel-plugin-offside-js@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-offside-js/-/babel-plugin-offside-js-0.5.1.tgz#04d7fe11b5592bda36842c9d9010e4158271d58e"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -515,9 +515,9 @@ babel-polyfill@^6.23.0:
     core-js "^2.4.0"
     regenerator-runtime "^0.10.0"
 
-babel-preset-env@^1.1.11:
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/babel-preset-env/-/babel-preset-env-1.1.11.tgz#6aac8fc470ed2b38872f0b45b558e41125ea48a9"
+babel-preset-env@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-env/-/babel-preset-env-1.2.1.tgz#659178f54df74a74765f796be4d290b5beeb3f5f"
   dependencies:
     babel-plugin-check-es2015-constants "^6.3.13"
     babel-plugin-syntax-trailing-function-commas "^6.13.0"
