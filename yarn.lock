@@ -264,9 +264,9 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-offside-js@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/babel-plugin-offside-js/-/babel-plugin-offside-js-0.6.2.tgz#134ed8dbb8b17f7401236812ffc3bee582c5801a"
+babel-plugin-offside-js@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-offside-js/-/babel-plugin-offside-js-0.6.3.tgz#0b95a1ffb2fdee769dc6bc43c7a6d5e0be959e5f"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
