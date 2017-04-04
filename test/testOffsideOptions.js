@@ -11,8 +11,10 @@ tap.finish()
 function * iterSyntaxVariations() ::
   // while (expr) body variations
   yield :: expectSyntaxError: true
-    , title: 'linted while statement with expression'
-    , source: @[] 'while (expr) singleStatement'
+    , title: 'inconsisent indented while statement with expression'
+    , source: @[] 'while expr'
+                , '  firstStatement'
+                , '  secondStatement'
 
   yield :: expectValid: true
     , title: 'vanilla while statement'
