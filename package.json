@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-jsy",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "description": "Babel preset for offside-based javascript syntax building on babel-preset-env",
   "author": "Shane Holloway <shane.holloway@ieee.org>",
   "license": "BSD-2-Clause",
@@ -20,6 +20,9 @@
     "url": "https://github.com/shanewholloway/babel-preset-jsy/issues"
   },
   "homepage": "https://github.com/shanewholloway/babel-preset-jsy#readme",
+  "bin": {
+    "jsy-init": "dist/bin/jsy-init.js"
+  },
   "main": "dist/index.js",
   "dependencies": {
     "babel-plugin-offside-js": "^0.6.5",
