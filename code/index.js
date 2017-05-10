@@ -4,7 +4,8 @@ const bpi_offside_js = require('babel-plugin-offside-js')
 const bpi_class_props = require('babel-plugin-transform-class-properties')
 
 module.exports = exports = function preset(context, opts={}) ::
-  const opts_stage_3 = ! opts.no_stage_3
+  const opts_stage_3 = ! opts.no_stage_3 || opts.stage_3
+  delete opts.stage_3; delete opts.no_stage_3; 
   const opts_offside = opts.offside
   delete opts.offside
 
