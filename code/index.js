@@ -13,12 +13,6 @@ module.exports = exports = function preset(context, opts={}) ::
   if !opts.targets ::
     opts.targets = @{} node: 'current'
 
-  if 'current' == opts.targets.node ::
-    const major_ver = /^v(\d+)\.\d\d/.exec @ process.version
-    if major_ver ::
-      // babel-preset-env has a bug handling two digit Node minor versions.
-      opts.targets.node = parseInt(major_ver[1]) + 0.9
-
   if true === opts.targets.browser ::
     opts.targets.browser = 'last 1 versions, > 2% in US'
 
