@@ -3,6 +3,8 @@ const babel_preset_jsy_json = require('../../package.json')
 const fs = require('fs')
 
 const argv = process.argv.slice(2)
+
+let jsy_mode='jsy'
 let jsy_options
 const jsy_option_sets =
   @{} no_stage_3:
@@ -22,18 +24,22 @@ if argv.includes @ '--help' ::
       , '  Options:'
       , ''
       , '    --help            output usage information'
+      , '    --lean            add concise babel config option to exclude stage_3 preset (used to prevent async/await code generation)'
       , '    --no_stage_3      add babel config option to exclude stage_3 preset (used to prevent async/await code generation)'
       , '    --options         add all babel config options for JSY for later editing'
       , ''
     .join('\n')
 
 else ::
+  if argv.includes @ '--lean' ::
+    jsy_mode = 'jsy/lean'
+
   if argv.includes @ '--no_stage_3' || argv.includes @ '--no_stage3' ::
     jsy_options = Object.assign @ {}, jsy_options, jsy_option_sets.no_stage_3
 
   if argv.includes @ '--options' ::
     jsy_options = Object.assign @ {}, jsy_options, jsy_option_sets.all
-    
+
   transformPackageJson()
 
 
@@ -76,14 +82,18 @@ function setupDevDependencies(devDependencies) ::
   return devDependencies
 
 
+const existing_jsy_modes = new Set @# 'jsy', 'jsy/lean'
+
 function setupBabelPresets(babel) ::
   if ! babel.presets ::
     babel.presets = []
   else if 'string' === babel.presets ::
     babel.presets = [babel.presets]
-  
-  if ! babel.presets.find @ e => e=='jsy' || e[0]=='jsy' ::
-    babel.presets.push @ jsy_options ? ['jsy', jsy_options] : 'jsy'
+
+  if babel.presets.find @ e => existing_jsy_modes.has(e) || existing_jsy_modes.has(e[0]) ::
+    console.log @ 'Existing JSY settings found. Please edit Babel settings manually'
+  else ::
+    babel.presets.push @ jsy_options ? [jsy_mode, jsy_options] : jsy_mode
 
   return babel
 
