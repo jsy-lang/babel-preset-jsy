@@ -1,6 +1,6 @@
 const bps_env = require('babel-preset-env').default
 const bps_stage_3 = require('babel-preset-stage-3')
-const bpi_offside_js = require('babel-plugin-offside-js')
+const bpi_offside_js = require('babel-plugin-offside-js').default
 const bpi_class_props = require('babel-plugin-transform-class-properties')
 const bpi_async_gen_fns = require('babel-plugin-transform-async-generator-functions')
 
