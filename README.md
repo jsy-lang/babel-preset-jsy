@@ -3,4 +3,4 @@ JSY is an indented (offside) JavaScript dialect. We believe indentation is bette
 
 This is the Babel 6.x preset for offside-based JavasCript syntax building on [babel-preset-env](https://www.npmjs.com/package/babel-preset-env)
 
-Plese see [JSY language docs](https://github.com/jsy-lang/jsy-lang-docs) for details on the JSY dialect.
+Please see [JSY language docs](https://github.com/jsy-lang/jsy-lang-docs) for details on the JSY dialect.
