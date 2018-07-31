@@ -14,12 +14,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shanewholloway/babel-preset-jsy"
+    "url": "git+https://github.com/jsy-lang/babel-preset-jsy"
   },
   "bugs": {
-    "url": "https://github.com/shanewholloway/babel-preset-jsy/issues"
+    "url": "https://github.com/jsy-lang/babel-preset-jsy/issues"
   },
-  "homepage": "https://github.com/shanewholloway/babel-preset-jsy#readme",
+  "homepage": "https://github.com/jsy-lang/babel-preset-jsy#readme",
   "bin": {
     "jsy-init": "dist/bin/jsy-init.js"
   },
