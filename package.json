@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-jsy",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "description": "Babel preset for offside-based javascript syntax building on babel-preset-env",
   "author": "Shane Holloway <shane.holloway@ieee.org>",
   "license": "BSD-2-Clause",
@@ -25,16 +25,16 @@
   },
   "main": "dist/index.js",
   "dependencies": {
-    "babel-plugin-offside-js": "^0.10.1",
+    "babel-plugin-offside-js": "^0.10.4",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-async-generator-functions": "^6.24.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-dynamic-import-node": "^2.0.0",
     "tap-lite-tester": "^0.5.2"
   },
   "babel": {
