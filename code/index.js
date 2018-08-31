@@ -1,8 +1,10 @@
 const bps_env = require('babel-preset-env').default
 const bps_stage_3 = require('babel-preset-stage-3')
-const bpi_offside_js = require('babel-plugin-offside-js').default
 const bpi_dyn_import = require('babel-plugin-syntax-dynamic-import')
 const bpi_class_props = require('babel-plugin-transform-class-properties')
+
+const bpi_offside_js = require('babel-plugin-offside-js').default
+const bpi_jsy_lite = require('babel-plugin-jsy-lite').default
 
 preset.preset = preset.default = preset
 module.exports = exports = preset
@@ -27,7 +29,11 @@ function preset(context, opts={}) ::
 
   plugins.push @# bpi_class_props
   plugins.push @# bpi_dyn_import
-  plugins.push @# bpi_offside_js, opts_offside
+
+  if opts.jsy_lite ::
+    plugins.push @# bpi_jsy_lite
+  else ::
+    plugins.push @# bpi_offside_js, opts_offside
 
   return @{} presets, plugins
 

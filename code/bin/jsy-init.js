@@ -24,6 +24,7 @@ if argv.includes @ '--help' ::
       , '  Options:'
       , ''
       , '    --help            output usage information'
+      , '    --lite            lean and use new `babel-plugin-jsy-lite` transpiler'
       , '    --lean            add concise babel config option to exclude stage_3 preset (used to prevent async/await code generation)'
       , '    --no_stage_3      add babel config option to exclude stage_3 preset (used to prevent async/await code generation)'
       , '    --options         add all babel config options for JSY for later editing'
@@ -31,7 +32,10 @@ if argv.includes @ '--help' ::
     .join('\n')
 
 else ::
-  if argv.includes @ '--lean' ::
+  if argv.includes @ '--lite' ::
+    jsy_mode = 'jsy/lite'
+
+  else if argv.includes @ '--lean' ::
     jsy_mode = 'jsy/lean'
 
   if argv.includes @ '--no_stage_3' || argv.includes @ '--no_stage3' ::
@@ -82,7 +86,7 @@ function setupDevDependencies(devDependencies) ::
   return devDependencies
 
 
-const existing_jsy_modes = new Set @# 'jsy', 'jsy/lean'
+const existing_jsy_modes = new Set @# 'jsy', 'jsy/lean', 'jsy/lite'
 
 function setupBabelPresets(babel) ::
   if ! babel.presets ::
